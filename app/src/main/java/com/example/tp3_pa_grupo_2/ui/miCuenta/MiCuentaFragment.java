@@ -1,4 +1,4 @@
-package com.example.tp3_pa_grupo_2.ui.slideshow;
+package com.example.tp3_pa_grupo_2.ui.miCuenta;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.tp3_pa_grupo_2.databinding.FragmentSlideshowBinding;
+import com.example.tp3_pa_grupo_2.databinding.FragmentMicuentaBinding;
 
-public class SlideshowFragment extends Fragment {
+public class MiCuentaFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentMicuentaBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        MiCuentaViewModel miCuentaViewModel =
+                new ViewModelProvider(this).get(MiCuentaViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentMicuentaBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        miCuentaViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

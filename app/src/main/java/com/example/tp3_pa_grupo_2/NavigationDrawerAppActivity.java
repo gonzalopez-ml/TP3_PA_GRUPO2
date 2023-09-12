@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -29,20 +28,27 @@ public class NavigationDrawerAppActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarNavigationDrawerApp.toolbar);
-        binding.appBarNavigationDrawerApp.fab.setOnClickListener(new View.OnClickListener() {
+
+
+        binding.appBarNavigationDrawerApp.btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                // Obtén el NavController
+                NavController navController = Navigation.findNavController(NavigationDrawerAppActivity.this, R.id.nav_host_fragment_content_navigation_drawer_app);
+
+                // Navega hacia la galería (nav_gallery)
+                navController.navigate(R.id.nav_agregar_registro);
             }
         });
+
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-                .setDrawerLayout(drawer)
+                R.id.nav_parking2, R.id.nav_agregar_registro, R.id.nav_micuenta)
+                .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation_drawer_app);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -62,4 +68,7 @@ public class NavigationDrawerAppActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+
 }

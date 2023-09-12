@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Toast.makeText(getApplicationContext(), "Logueado con exito", Toast.LENGTH_SHORT).show();
-        //TODO lógica que falte.
-
+        Intent intent = new Intent(this, NavigationDrawerAppActivity.class);
+        startActivity(intent);
     }
 
     public void registrarse(View view) {
@@ -60,4 +60,6 @@ public class MainActivity extends AppCompatActivity {
     private boolean validateMail(String mail) {
         return mail.contains(".com") && mail.contains("@");
     }
+
+
 }

@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation2"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_parking2">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.tp3_pa_grupo_2.ui.home.HomeFragment"
+        android:id="@+id/nav_parking2"
+        android:name="com.example.tp3_pa_grupo_2.ui.parqueos.ParqueosFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_parqueos" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.tp3_pa_grupo_2.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_agregar_registro"
+        android:name="com.example.tp3_pa_grupo_2.ui.registro.AgregarRegistroFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_agregar_registro" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.tp3_pa_grupo_2.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_micuenta"
+        android:name="com.example.tp3_pa_grupo_2.ui.miCuenta.MiCuentaFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_micuenta" />
 </navigation>
