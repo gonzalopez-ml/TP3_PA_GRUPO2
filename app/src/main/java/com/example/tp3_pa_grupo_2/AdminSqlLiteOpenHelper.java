@@ -67,4 +67,15 @@ public class AdminSqlLiteOpenHelper extends SQLiteOpenHelper {
         );
         return mcursor;
     }
+
+    public Long insertarParqueo(Parking parqueo) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("user_id", parqueo.getIdUsuario());
+        contentValues.put("matricula", parqueo.getMatricula());
+        contentValues.put("tiempo", parqueo.getTiempo());
+
+        Long resultado = this.getWritableDatabase().insert("parkings", null, contentValues);
+        return resultado;
+    }
+
 }

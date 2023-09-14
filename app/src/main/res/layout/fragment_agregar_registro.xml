@@ -20,7 +20,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextMatricula"
+            android:id="@+id/txt_matricula"
             android:layout_width="match_parent"
             android:layout_height="59dp"
             android:layout_weight="1"
@@ -29,8 +29,8 @@
             android:inputType="text"
             android:textAlignment="textStart" />
 
-        <EditText
-            android:id="@+id/editTextTiempo"
+    <EditText
+            android:id="@+id/txt_tiempo"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_weight="1"
